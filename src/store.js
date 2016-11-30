@@ -1,17 +1,18 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import ApolloClient from 'apollo-client';
-
-// import { todoReducer, userReducer } from './reducers';
-
+import reducers from './reducers'
 const client = new ApolloClient();
+
+
+const initialState = {}
+
 
 const store = createStore(
   combineReducers({
-    // todos: todoReducer,
-    // users: userReducer,
     apollo: client.reducer(),
+    ...reducers,
   }),
-  {}, // initial state
+  initialState,
   compose(
       applyMiddleware(client.middleware()),
       // If you are using the devToolsExtension, you can add it here also
