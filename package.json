@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start-app-client": "webpack-dev-server -d --hot --inline --no-info --port 3020",
-    "start-app-server": "nodemon ui/server.js --watch ui --exec babel-node",
+    "start-app-server": "nodemon src/server.js --watch src --exec babel-node",
     "start": "concurrently \"npm run start-app-client\" \"npm run start-app-server\"",
-    "lint": "eslint ui",
+    "lint": "eslint src",
     "build": "webpack -p --progress --config ./webpack.production.config.js",
     "test": "npm run lint"
   },

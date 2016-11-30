@@ -7,7 +7,7 @@ import { Client } from 'subscriptions-transport-ws';
 import * as ReactGA from 'react-ga';
 // Polyfill fetch
 import 'isomorphic-fetch';
-
+import store from './store'
 import './style/index.css';
 
 import routes from './routes';
@@ -44,7 +44,7 @@ const client = createApolloClient({
 });
 
 render((
-  <ApolloProvider client={client}>
+  <ApolloProvider store={store} client={client}>
     <Router history={browserHistory} onUpdate={logPageView}>
       {routes}
     </Router>
