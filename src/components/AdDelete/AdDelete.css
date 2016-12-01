@@ -1,0 +1,8 @@
+.AdDelete {
+  position: relative;
+  float: right;
+  bottom: 1.2rem;
+  right: 2.2rem;
+  /*opacity: 0.3;*/
+  z-index: 10;
+}

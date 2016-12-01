@@ -5,6 +5,7 @@ import FeedPage from './FeedPage';
 import Layout from './Layout';
 import NewEntryPage from './NewEntryPage';
 import CommentsPage from './CommentsPage';
+import Creativer from './Creativer';
 
 export default (
   <Route
@@ -17,6 +18,10 @@ export default (
     <Route
       path="feed/:type"
       component={FeedPage}
+    />
+    <Route
+      path="creativer"
+      component={Creativer}
     />
     <Route
       path="submit"

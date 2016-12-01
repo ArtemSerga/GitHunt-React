@@ -1,5 +1,5 @@
-import { getValue } from '../../components/AdField'
-import { isValidAd } from '../../components/Ad'
+import { getValue } from '../components/AdField/AdField'
+import { isValidAd } from '../components/Ad/Ad'
 
 
 const DEFAULT = {

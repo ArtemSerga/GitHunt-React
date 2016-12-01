@@ -9,6 +9,7 @@ import VoteButtons from './VoteButtons';
 import RepoInfo from './RepoInfo';
 import { COMMENT_QUERY } from '../routes/CommentsPage';
 
+
 const FeedEntry = ({
   loggedIn,
   onVote,
@@ -69,6 +70,7 @@ const FeedEntry = ({
     </div>
   );
 };
+
 
 FeedEntry.fragments = {
   entry: gql`

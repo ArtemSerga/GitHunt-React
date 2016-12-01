@@ -2,7 +2,7 @@
 const DEFAULT = {
   image: null,
   url: null,
-  title: null,
+  title: 'HELLO',
 }
 
 

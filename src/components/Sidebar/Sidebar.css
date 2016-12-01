@@ -1,0 +1,10 @@
+.Sidebar {
+  background-color: lightgray;
+  padding: 5rem 0 0 2rem;
+  border-right: 1px solid rgba(211, 211, 211, 0.42);
+  width: 22rem;
+  float: left;
+  height: 100%;
+  position: fixed;
+  overflow: scroll;
+}

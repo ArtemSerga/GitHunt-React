@@ -1,0 +1,19 @@
+.Insertion {
+  float: left;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+}
+
+.Insertion input{
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.InsertionName {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 1rem;
+  margin-bottom: 0.2rem;
+}
+.InsertionValue {
+  width: 18rem;
+}

@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import ApolloClient from 'apollo-client';
-import reducers from './reducers'
+import reducers from './redux'
 const client = new ApolloClient();
 
 
@@ -8,9 +8,9 @@ const initialState = {}
 
 
 const store = createStore(
-  combineReducers({
-    apollo: client.reducer(),
+    combineReducers({
     ...reducers,
+    apollo: client.reducer(),
   }),
   initialState,
   compose(

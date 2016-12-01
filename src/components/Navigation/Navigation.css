@@ -1,0 +1,12 @@
+.Navigation {
+  /*background-color: 'darkslateblue';*/
+  /*background-color: #E10098;*/
+  /*background-color: turquoise;*/
+  background-color: darkblue;
+
+
+  padding: 0.7rem 1rem 0.6rem 1rem;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}

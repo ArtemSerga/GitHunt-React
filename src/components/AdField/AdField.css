@@ -1,0 +1,38 @@
+textarea, input {
+  padding: 0.5rem 1rem;
+  border: 0;
+  resize: none;
+  word-break: break-all;
+  width: 25rem;
+  line-height: 1.6rem;
+}
+
+.AdField .headline,
+.AdField .headline1,
+.AdField .headline2 {
+  height: 2.4rem;
+}
+
+.AdField .headline textarea,
+.AdField .headline1 textarea,
+.AdField .headline2 textarea
+{
+  /*font-style: italic;*/
+  height: 2.34rem;
+}
+
+.AdField .headline textarea,
+.AdField .headline1 textarea
+{
+  border-radius: 0.5rem 0.5rem 0 0;
+
+}
+
+.AdField .body textarea{
+  border-radius: 0 0 0.5rem 0.5rem;
+  height: 4.1rem;
+}
+
+.AdField textarea:focus {
+  background-color: lightyellow !important;
+}

@@ -1,0 +1,11 @@
+.Source {
+  float: left;
+}
+
+.Source input {
+  border-radius: 0.5rem;
+  background: white;
+  margin-left: 1rem;
+  width: 35rem;
+  /*color: lightblue;*/
+}
