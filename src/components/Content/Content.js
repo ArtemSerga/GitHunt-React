@@ -23,11 +23,7 @@ const Content = ({ targets }) => {
 
 
 const mapStateToProps = (state) => ({
-  insertions: state.insertions,
   targets: state.targets,
-  active: state.active,
-  ads: state.ads,
-  source: state.source,
 })
 
 

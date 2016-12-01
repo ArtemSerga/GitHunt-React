@@ -10,9 +10,11 @@ import { isTargetActive } from '../Target/Target'
 const s = {AdList: 'AdList'}
 
 let AdList = ({ target, ads, targetToAdIds, active }) => {
+  let adMap = {}
+  ads.forEach(ad => {adMap[ad.id] = ad})
   const adIds = targetToAdIds[target.id]
   const adList = adIds.map(adId => {
-    let ad = ads[adId]
+    let ad = adMap[adId]
     return (
         <Ad
           key={ad.id}

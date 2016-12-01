@@ -27,6 +27,11 @@ const targetToAdIds = (state=DEFAULT, action) => {
       return newState
 
     case 'SORT_ADS':
+      let adMap = {}
+      action.ads.forEach(ad => {
+        adMap[ad.id] = ad
+      })
+
       var newState = Object.assign({}, state);
 
       for (let tid in action.targets) {
@@ -40,8 +45,8 @@ const targetToAdIds = (state=DEFAULT, action) => {
         let emptyAds = []
   
         // Fill ads arrays
-        for (let adId in action.ads) {
-          let ad = action.ads[adId]
+        for (let adId in adMap) {
+          let ad = adMap[adId]
           let isEmpty = false
           let charsTotal = 0
           for (let name in target.fields) {

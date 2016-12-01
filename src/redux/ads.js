@@ -12,21 +12,27 @@ const getEmptyAd = (id) => {
 }
 
 
-const ads = (state={}, action) => {
-  var newState = Object.assign({}, state);
+const ads = (state=[], action) => {
 
   switch (action.type) {
     case 'ADD_AD':
-      newState[action.id] = getEmptyAd(action.id)
-      return newState
+      return [
+          ...state,
+          getEmptyAd(action.id),
+      ]
 
     case 'EDIT_AD':
-      newState[action.id][action.name] = action.mask
-      return newState
+      return state.map(ad => {
+        if (ad.id == action.id) {
+          ad[action.name] = action.mask
+        }
+        return ad
+      })
 
     case 'DELETE_AD':
-      delete newState[action.id]
-      return newState
+      return state.filter(ad => {
+        return ad.id != action.id
+      })
 
     default:
       return state
