@@ -41,8 +41,15 @@ module.exports = {
       },
     ]
   },
-  devServer: {
+  devServer: {},
+
+  // Request hack
+  node: {
+    net: "empty",
+    tls: "empty",
+    fs: "empty",
   },
+
   postcss(bundler) {
     return [
       // Transfer @import rule by inlining content, e.g. @import 'normalize.css'

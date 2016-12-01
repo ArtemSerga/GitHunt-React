@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import React, { Component, PropTypes } from 'react'
 import * as cheerio from 'cheerio'
-// import request from 'request'
+import request from 'request'
 import { editInsertion } from '../../actions/insertions'
 import { DEFAULT_INSERTIONS } from '../../redux/insertions'
 import InputGroup from 'react-bootstrap/lib/InputGroup'
@@ -37,13 +37,11 @@ class Source extends Component {
     event.preventDefault()
     let url = this.input.value;
     const options = {
-      url: url,
+      url: `http://cors.io?${url}`,
       withCredentials: false,
     }
     var result = {}
 
-
-    /*
     request(
       options,
       (err, res, body) => {
@@ -92,7 +90,6 @@ class Source extends Component {
 
       }
     )
-      */
   }
 
   render() {

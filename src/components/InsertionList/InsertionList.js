@@ -4,7 +4,7 @@ import Insertion from '../Insertion/Insertion'
 
 
 
-const InsertionList = ({ source, insertions, events }) => {
+const InsertionList = ({ source, insertions }) => {
   let items = []
 
   for (let name in insertions) {
@@ -29,7 +29,6 @@ const InsertionList = ({ source, insertions, events }) => {
 const mapStateToProps = (state) => ({
   source: state.source,
   insertions: state.insertions,
-  events: state.events,
 })
 
 
