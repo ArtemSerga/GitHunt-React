@@ -12,14 +12,14 @@ import Navigation from './Navigation/Navigation'
 
 const App = () => (
   <Grid fluid style={{ padding: 0 }}>
-    <Navigation/>
+    {/*<Navigation/>*/}
 
     <Row>
-      <Sidebar />
+      {/*<Sidebar />*/}
       <Content />
     </Row>
 
-    <SortAds />
+    {/*<SortAds />*/}
     <AdAdd />
   </Grid>
 )

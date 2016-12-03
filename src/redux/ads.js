@@ -15,11 +15,6 @@ const getEmptyAd = (id) => {
 const ads = (state=[], action) => {
 
   switch (action.type) {
-    case 'ADD_AD':
-      return [
-          ...state,
-          getEmptyAd(action.id),
-      ]
 
     case 'EDIT_AD':
       return state.map(ad => {
@@ -27,11 +22,6 @@ const ads = (state=[], action) => {
           ad[action.name] = action.mask
         }
         return ad
-      })
-
-    case 'DELETE_AD':
-      return state.filter(ad => {
-        return ad.id != action.id
       })
 
     default:
