@@ -2,14 +2,32 @@ import { getValue } from '../components/AdField/AdField'
 import { isValidAd } from '../components/Ad/Ad'
 
 
-const DEFAULT = {
-  GOOGLE_ADWORDS: [],
+export const DEFAULT = {
+  // GOOGLE_ADWORDS: [],
   YANDEX_DIRECT: [],
+}
+
+const INIT_TARGET_TO_ADS = 'INIT_TARGET_TO_ADS'
+
+
+export const initTargetToAds = (adIds) => {
+  return {
+    type: INIT_TARGET_TO_ADS,
+    adIds: adIds
+  }
 }
 
 
 const targetToAdIds = (state=DEFAULT, action) => {
   switch (action.type) {
+
+    case INIT_TARGET_TO_ADS:
+      var newState = {}
+      for (let target in DEFAULT) {
+        newState[target] = action.adIds
+      }
+      return newState
+
     case 'ADD_AD':
       var newState = Object.assign({}, state);
       for (let key in newState) {

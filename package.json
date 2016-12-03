@@ -61,7 +61,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "apollo-client": "^0.5.5",
+    "apollo-client": "^0.5.10",
     "cheerio": "^0.22.0",
     "classnames": "^2.2.5",
     "express": "^4.14.0",
